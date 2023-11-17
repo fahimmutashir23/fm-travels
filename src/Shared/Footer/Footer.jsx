@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="footer">
           <nav className=" text-center p-10 bg-gray-800 w-full">
             <header className="footer-title mx-auto">Contact Us</header>
-           <p className="mx-auto"> 123 ABS Street, Uni 21, Bangladesh <br /> +88 123456789 <br /> Mon - Fri: 08:00 -
+           <p className="mx-auto">4th Floor, Rapa Plaza, Dhanmondi, 27 <br />Dhaka-1205, Bangladesh <br /> +880 1581 868984 <br /> Mon - Fri: 08:00 -
             22:00 <br /> Sat - Sun: 10:00 - 23:00</p>
           </nav>
           <nav className="mx-auto p-10">

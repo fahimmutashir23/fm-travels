@@ -6,6 +6,7 @@ import { RouterProvider } from "react-router-dom";
 import Routes from "./Routes/Routes.jsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Provider from "./Provider/Provider.jsx";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const queryClient = new QueryClient();
 

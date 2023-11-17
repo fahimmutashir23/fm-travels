@@ -76,24 +76,24 @@ const Navbar = () => {
               </label>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-black bg-opacity-70 text-white rounded-box"
+                className="menu menu-sm dropdown-content mt-3 z-[1] py-2 shadow bg-black bg-opacity-70 text-white rounded-md pr-10"
               >
-                <li className="hover:bg-base-200">
+                <li className="hover:bg-base-100">
                   <Link className="justify-between">
                     {user?.displayName}
                     <span className="badge">New</span>
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <NavLink to="/dashboard/userHome" className="rounded-lg">
                     Dashboard
                   </NavLink>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <NavLink to="/dashboard/cart" className="rounded-lg">
                     <BsCartCheckFill className="text-xl"></BsCartCheckFill>
                   </NavLink>
-                </li>
+                </li> */}
                 <li className="hover:bg-base-200">
                   <button onClick={() => logOut()} className="">
                     LogOut
