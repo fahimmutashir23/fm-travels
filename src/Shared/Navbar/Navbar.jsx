@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../../Components/Logo/Logo";
-import { BsCartCheckFill } from "react-icons/bs";
+// import { BsCartCheckFill } from "react-icons/bs";
 import useAuth from "../../Hooks/useAuth";
 
 const Navbar = () => {
