@@ -2,9 +2,10 @@ import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import Swal from "sweetalert2";
 import { useState } from "react";
-import ReactCaptcha from 'modern-react-captcha';
+// import ReactCaptcha from "modern-react-captcha";
 import background from "../../assets/image/login-bg.jpg";
 import SocialLogin from "../../Components/SocilaLogin/SocialLogin";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Login = () => {
   const { signIn } = useAuth();
@@ -31,12 +32,16 @@ const Login = () => {
     });
   };
 
-    const handleSuccess = () => {
+  // const handleSuccess = () => {
+  //   setDisable(false);
+  // };
+  // const handleFailure = () => {};
+
+  function onChange(value) {
+    if(value){
       setDisable(false)
     }
-      const handleFailure = () => {
-
-    }
+  }
 
   return (
     <div
@@ -80,7 +85,7 @@ const Login = () => {
               </label>
             </div>
             <div className="text-black">
-              <ReactCaptcha
+              {/* <ReactCaptcha
                   charset="uln"
                   length={6}
                   color="white"
@@ -88,7 +93,12 @@ const Login = () => {
                   reload={true}
                   handleSuccess={handleSuccess}
                   handleFailure={handleFailure}
-                />
+                /> */}
+              <ReCAPTCHA 
+              sitekey={import.meta.env.VITE_CAPTCHA_TESTING_SITE_KEY} 
+              // sitekey={import.meta.env.VITE_CAPTCHA_SITE_KEY} 
+              onChange={onChange} 
+              />
             </div>
             <div className="form-control mt-6">
               <button
